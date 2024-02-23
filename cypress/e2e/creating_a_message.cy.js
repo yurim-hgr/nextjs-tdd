@@ -1,6 +1,6 @@
 describe("Creating a message", () => {
   it("Displays the message in the list", () => {
-    cy.visit("/");
+    cy.visit("/message");
 
     cy.get('[data-testid="messageText"]').type("New message");
 
