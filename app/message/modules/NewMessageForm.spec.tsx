@@ -6,7 +6,7 @@ import NewMessageForm from "@/app/message/modules/NewMessageForm";
 
 describe("<NewMessageForm />", () => {
   describe("clicking the send button", () => {
-    let sendHandler;
+    let sendHandler: jest.Mock;
 
     async function sendMessage() {
       const user = userEvent.setup();
@@ -21,7 +21,13 @@ describe("<NewMessageForm />", () => {
 
     it("clears the text field", async () => {
       await sendMessage();
-      expect(screen.getByTestId("messageText").value).toEqual("");
+
+      // Use type assertion to tell TypeScript it's an HTMLInputElement
+      const messageTextField = screen.getByTestId(
+        "messageText"
+      ) as HTMLInputElement;
+
+      expect(messageTextField.value).toEqual("");
     });
 
     it("calls the send handler", async () => {

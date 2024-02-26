@@ -4,7 +4,7 @@ interface NewMessageFormProps {
   onSend: (newMessage: string) => void;
 }
 
-export const NewMessageForm: React.FC<NewMessageFormProps> = ({ onSend }) => {
+const NewMessageForm: React.FC<NewMessageFormProps> = ({ onSend }) => {
   const [inputText, setInputText] = useState<string>("");
 
   const handleTextChange = (e: ChangeEvent<HTMLInputElement>) => {

@@ -1,7 +1,7 @@
 "use client";
 
-import NewMessageForm from "./modules/NewMessageForm";
-import MessageList from "./modules/MessageList";
+import NewMessageForm from "@/app/message/modules/NewMessageForm";
+import MessageList from "@/app/message/modules/MessageList";
 import React, { useState } from "react";
 
 export default function Home() {
