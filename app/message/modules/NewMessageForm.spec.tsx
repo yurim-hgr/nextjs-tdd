@@ -21,12 +21,9 @@ describe("<NewMessageForm />", () => {
 
     it("clears the text field", async () => {
       await sendMessage();
-
-      // Use type assertion to tell TypeScript it's an HTMLInputElement
       const messageTextField = screen.getByTestId(
         "messageText"
       ) as HTMLInputElement;
-
       expect(messageTextField.value).toEqual("");
     });
 

@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent } from "react";
 
 interface NewMessageFormProps {
   onSend: (newMessage: string) => void;
