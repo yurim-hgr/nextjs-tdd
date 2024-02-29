@@ -5,16 +5,16 @@ import NewSearchForm from "./search-form";
 import SearchList from "./search-list";
 
 export default function Search() {
-  //   const [data, setData] = useState<ResultData>([]);
+  // const [data, setData] = useState<ResultData>([]);
 
-  //   const fetchData = async (keyword: string) => {
-  //     const response: ResponseType = await axios({
-  //       url: "/search",
-  //       method: "get",
-  //       data: { keyword },
-  //     });
-  //     setData(response.data.data);
-  //   };
+  // const fetchData = async (keyword: string) => {
+  //   const response: ResponseType = await axios({
+  //     url: "/search",
+  //     method: "get",
+  //     data: { keyword },
+  //   });
+  //   setData(response.data.data);
+  // };
   const [search, setSearch] = useState<string[]>([]);
 
   function handleSend(newSearch: string) {
